@@ -59,6 +59,11 @@ public final class Zephyr: NSObject {
 
     // The `UserDefaults` object to sync with `NSUbiquitousKeyValueStore` (e.g., iCloud).
     private var userDefaults: UserDefaults = UserDefaults.standard
+    
+    // Use custom UserDefaults
+    public static func use(userDefaults: UserDefaults) {
+        self.shared.userDefaults = userDefaults
+    }
 
     /// Zephyr's initialization method.
     ///
